@@ -1,0 +1,152 @@
+:root {
+  --body-bg-color: #121214;
+  --text-color: #e1e1e6;
+  --title-color: #04d361;
+  --form-color: #a8a8a8;
+  --bg-button-color: #8257e5;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url('assets/computador.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+header {
+  padding: 3rem;
+}
+header img {
+  width: 400px;
+  height: 100px;
+}
+
+.container {
+  width: 50vw;
+  height: 100vh;
+  position: absolute;
+  background-color: var(--body-bg-color);
+  z-index: -1;
+}
+
+section {
+  padding: 3rem;
+}
+
+h1 {
+  color: var(--title-color);
+  font-family: 'Work Sans', sans-serif;
+  margin-bottom: 8px;
+  font-size: 24px;
+}
+
+h3,
+p {
+  color: var(--text-color);
+  font-size: 18px;
+  font-family: 'Spartan', sans-serif;
+}
+
+form {
+  padding: 3rem;
+}
+
+label {
+  color: var(--form-color);
+  font-size: 24px;
+  font-family: 'Spartan', sans-serif;
+  font-weight: 700;
+}
+
+.input {
+  display: flex;
+  margin-top: 16px;
+}
+
+input {
+  width: 55vw;
+  height: 48px;
+  border-left: 5px solid var(--title-color);
+  outline: none;
+  padding-left: 16px;
+}
+
+.input button {
+  width: 48px;
+  height: 48px;
+  background-color: var(--bg-button-color);
+  border: none;
+  box-shadow: 12px 8px 24px #121214;
+}
+
+aside {
+  padding: 3rem;
+}
+
+aside a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+aside a p {
+  font-family: 'Spartan', sans-serif;
+  color: var(--bg-button-color);
+  font-weight: 700;
+  font-size: 18px;
+}
+a img {
+  margin-left: 8px;
+  background: var(--bg-button-color);
+}
+
+/* MEDIAS */
+
+@media (max-width: 1468px) {
+  body {
+    background: var(--body-bg-color);
+  }
+  .container {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    background: var(--body-bg-color);
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  header {
+    padding: 3rem 0;
+  }
+  header img {
+    width: 80vh;
+  }
+  section {
+    width: 90vw;
+    padding: 0;
+    text-align: center;
+  }
+  section h1 {
+    font-size: 32px;
+    margin-bottom: 24px;
+  }
+  section h3 {
+    margin-bottom: 24px;
+  }
+  form {
+    width: 90vw;
+    padding: 0;
+    margin-top: 3rem;
+  }
+  .input input {
+    width: 80vw;
+  }
+}
